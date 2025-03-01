@@ -12,7 +12,7 @@ public class Example {
 @Test
 public void launchUrl() {
 	WebDriverManager.chromedriver().setup();
-//	System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//driver//chromedriver");
+	System.setProperty("webdriver.chrome.driver", " /usr/local/bin/chromedriver-linux64/chromedriver");
 	ChromeOptions options=new ChromeOptions();
 	options.addArguments("--headless");
 //	options.addArguments("--no-sandbox");
