@@ -11,9 +11,9 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class Example {
 @Test
 public void launchUrl() {
-//	WebDriverManager.chromedriver().setup();
+	WebDriverManager.chromedriver().setup();
 //	System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//driver//chromedriver.exe");
-	System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+//	System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
 	ChromeOptions options=new ChromeOptions();
 	options.addArguments("--headless");
 	options.addArguments("--no-sandbox");
