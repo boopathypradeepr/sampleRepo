@@ -11,7 +11,7 @@ public class Example {
 @Test
 public void launchUrl() {
 //	WebDriverManager.chromedriver().setup();
-	System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//driver//chromedriver.exe");
+	System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//driver//chromedriver");
 	WebDriver driver=new ChromeDriver();
 	driver.get("https://google.com/");
 	driver.quit();
