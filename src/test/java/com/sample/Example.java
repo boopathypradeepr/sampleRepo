@@ -17,7 +17,7 @@ public void launchUrl() {
 	options.addArguments("--headless");
 	options.addArguments("--no-sandbox");
 	options.addArguments("--disable-dev-shm-usage");
-	WebDriver driver=new ChromeDriver();
+	WebDriver driver=new ChromeDriver(options);
 	driver.get("https://google.com/");
 	driver.quit();
 
