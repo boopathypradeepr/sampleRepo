@@ -1,0 +1,32 @@
+name: Run Automation Scripts
+
+on:
+  repository_dispatch:
+    types: [trigger-automation]  # This event type should match the one sent by Jenkins
+
+jobs:
+  automation:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Java
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'  # Specify the Java version (adjust as per your project requirement)
+
+      - name: Install Maven
+        run: |
+          sudo apt update
+          sudo apt install -y maven  # Install Maven if it's not already installed
+
+      - name: Build the Maven project
+        run: |
+          mvn clean install  # You can replace this with the appropriate Maven command (e.g., mvn clean package)
+
+      - name: Run automation scripts
+        run: |
+          echo "Running automation scripts..."
+          # Add any other script or command to run after the build (if needed)
