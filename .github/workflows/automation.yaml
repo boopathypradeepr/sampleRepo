@@ -2,7 +2,10 @@ name: Run Automation Scripts
 
 on:
   repository_dispatch:
-    types: [trigger-automation]  # This event type should match the one sent by Jenkins
+    types: [trigger-automation]
+   
+  push:
+    branches: [ "master" ]
 
 jobs:
   automation:
@@ -15,7 +18,8 @@ jobs:
       - name: Set up Java
         uses: actions/setup-java@v2
         with:
-          java-version: '11'  # Specify the Java version (adjust as per your project requirement)
+          java-version: '11'
+          distribution: ubuntu-latest          
 
       - name: Install Maven
         run: |
