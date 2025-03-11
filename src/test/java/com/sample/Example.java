@@ -16,11 +16,11 @@ public void launchUrl() {
 	System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
 	// System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/workspace/JenkinsProject/testing-code-dir/driver/chromedriver");
 	ChromeOptions options=new ChromeOptions();
-//	options.addArguments("--headless");
-//	options.addArguments("--no-sandbox");
-//	options.addArguments("--disable-dev-shm-usage");
-//	options.addArguments("--disable-gpu");
-//	options.addArguments("--remote-allow-origins=*");
+	options.addArguments("--headless");
+	options.addArguments("--no-sandbox");
+	options.addArguments("--disable-dev-shm-usage");
+	options.addArguments("--disable-gpu");
+	options.addArguments("--remote-allow-origins=*");
 	WebDriver driver=new ChromeDriver(options);
 	driver.get("https://google.com/");
 	driver.quit();
