@@ -23,6 +23,11 @@ public void launchUrl() {
 	options.addArguments("--disable-gpu");
 	options.addArguments("--remote-allow-origins=*");
 	options.addArguments("remote-debugging-port=9222");
+	 options.addArguments("--disable-software-rasterizer"); // Disable software rasterizer
+
+        // Disable DBus if running in a headless environment
+        options.addArguments("--disable-bundled-ppapi-flash");
+        options.addArguments("--disable-plugins-discovery");
 	WebDriver driver=new ChromeDriver(options);
 	driver.get("https://google.com/");
 	driver.quit();
