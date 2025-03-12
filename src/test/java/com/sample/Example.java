@@ -22,7 +22,7 @@ public void launchUrl() {
 	options.addArguments("--disable-dev-shm-usage");
 	options.addArguments("--disable-gpu");
 	options.addArguments("--remote-allow-origins=*");
-	// options.addArguments("remote-debugging-port=9222");
+	options.addArguments("remote-debugging-port=9222");
 	//  options.addArguments("--disable-software-rasterizer"); // Disable software rasterizer
 
  //        // Disable DBus if running in a headless environment
