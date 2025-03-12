@@ -22,6 +22,7 @@ public void launchUrl() {
 	options.addArguments("--disable-dev-shm-usage");
 	options.addArguments("--disable-gpu");
 	options.addArguments("--remote-allow-origins=*");
+	options.addArguments("remote-debugging-port=9222");
 	WebDriver driver=new ChromeDriver(options);
 	driver.get("https://google.com/");
 	driver.quit();
