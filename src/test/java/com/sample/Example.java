@@ -22,6 +22,7 @@ public void launchUrl() {
 	WebDriver driver=new ChromeDriver(options);
 	driver.get("https://google.com/");
 	driver.quit();
+	
 
 }
 
