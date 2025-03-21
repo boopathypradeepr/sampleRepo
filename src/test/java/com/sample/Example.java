@@ -16,7 +16,6 @@ public void launchUrl() {
 	System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
 	// System.setProperty("webdriver.chrome.driver", "/var/lib/jenkins/workspace/JenkinsProject/testing-code-dir/driver/chromedriver");
 	ChromeOptions options=new ChromeOptions();
-	
 	// options.setBinary("/opt/google/chrome/google-chrome");
 	options.addArguments("--headless");
 	options.addArguments("--no-sandbox");
